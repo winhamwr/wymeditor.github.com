@@ -1,13 +1,47 @@
 ---
 layout: default
-title: Download
+title: Install
 ---
-<h2>Download</h2>
-<h3>Stable Versions</h3>
-<p></p>
+<h1>Download and Install</h1>
 
-<h3>Development Builds/Nighlies</h3>
-<p>The latest development builds are available <a href="">here</a>.</p>
-<h3>Full source code</h3>
-<p>As you've probably figured out by now the source code is available on GitHub — get it now:<br />
-<code>git clone https://github.com/wymeditor/wymeditor.git</code></p>
+<p>The recommended way to install WYMeditor is from one of the packaged builds<p>
+
+<h2>Packaged Builds</h2>
+
+<p>The currently stable version is <a href="/download/latest/wymeditor.zip">1.0.0b1</a> or you can use the latest <a href="/download/1_0_0b1/wymeditor.zip">beta version</a>.</p>
+
+<p>Extract the zip folder inside your project (we recommend the wymeditor directory).</p>
+
+<p>Include the compressed WYMeditor source in your HTML (along with jquery):</p>
+<code>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
+<script type="text/javascript" src="/wymeditor/jquery.wymeditor.min.js"></script>
+</code>
+<p>
+    WYMeditor should work with jQuery 1.2.x and up, although using a later jQuery version is preferred.
+</p>
+<p>Now prepare your textarea:</p>
+<code>
+<textarea class="wymeditor"><p>Hello, World!</p></textarea>
+<input type="submit" class="wymupdate" />
+</code>
+
+<p>Make sure and include the <pre>wymupdate</pre> class on your submit button so that your HTML is automatically updated on form submit</p>
+<p>Now lets turn the textarea into a full-fledged wymeditor instance</p>
+
+<code>
+<script>
+  $(document).ready(function() {
+    $('.wymeditor').wymeditor();
+  });
+</script>
+</code>
+
+<p>More examples can be found in your <a href="https://github.com/wymeditor/wymeditor/tree/master/src/examples">examples directory</a>.</p>
+
+<h2>From Source</h2>
+
+<p>
+    For the newest and shiniest features and bug fixes, try WYMeditor directly from source via <a href="http://github.com/wymeditor/wymeditor">GitHub</a>.
+    Checkout the README file for instructions on building a minified version, or include the javascript source files directly (you can use the <a href="https://github.com/wymeditor/wymeditor/tree/master/src/test">test files</a> as an  example.
+</p>
